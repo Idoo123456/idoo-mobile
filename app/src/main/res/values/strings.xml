@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">FishBook</string>
     <string name="judul">MASUKKAN NOMOR HP</string>
+    <string name="img_main_url">https://i.pinimg.com/1200x/58/81/c3/5881c3913fc5382df25774ef56ece8d6.jpg</string>
+    <string name="img_dg_bg">https://i.pinimg.com/1200x/58/81/c3/5881c3913fc5382df25774ef56ece8d6.jpg</string>
 </resources>
