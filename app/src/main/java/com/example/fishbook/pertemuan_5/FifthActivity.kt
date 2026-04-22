@@ -27,23 +27,16 @@ class FifthActivity : AppCompatActivity() {
         // 1. Toolbar & Setup
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Gaming Portal"
+        supportActionBar?.title = "UniPin Portal"
         
-        // 2. Load BG Image for Portal Dunia Games (New Link provided)
+        // 2. Load BG Image (UniPin Theme)
         val portalBgUrl = "https://wallpaperaccess.com/full/2051333.jpg"
         Glide.with(this)
             .load(portalBgUrl)
             .centerCrop()
             .into(binding.collapsingImage)
             
-        // Load the secondary content image
-        val contentImageUrl = getString(R.string.img_main_url)
-        Glide.with(this)
-            .load(contentImageUrl)
-            .centerCrop()
-            .into(binding.headerImage)
-
-        // 3. WebView Setup
+        // 3. WebView Setup (Arahkan ke UniPin)
         setupWebView()
 
         // 4. Scroll Logic
@@ -79,7 +72,7 @@ class FifthActivity : AppCompatActivity() {
                     }
                 }
             }
-            loadUrl("https://duniagames.co.id/en")
+            loadUrl("https://www.unipin.com/")
         }
     }
 
@@ -99,7 +92,7 @@ class FifthActivity : AppCompatActivity() {
         binding.fabScrollTop.setOnClickListener {
             binding.nestedScrollView.smoothScrollTo(0, 0)
             binding.appBar.setExpanded(true, true)
-            Snackbar.make(binding.root, "Discovery Refreshed", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, "Page Refreshed", Snackbar.LENGTH_SHORT).show()
         }
     }
 
@@ -119,7 +112,7 @@ class FifthActivity : AppCompatActivity() {
                 true
             }
             R.id.action_about -> {
-                showToast("Dunia Games Portal v1.0")
+                showToast("UniPin Portal v1.0")
                 true
             }
             else -> super.onOptionsItemSelected(item)
