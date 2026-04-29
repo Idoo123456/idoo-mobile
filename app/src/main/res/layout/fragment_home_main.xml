@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="140dp"
+    android:background="@color/unipin_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="36dp">
+
+        <!-- Welcome Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Welcome back to UniPin"
+            android:textColor="@color/unipin_text_main"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Master the game, unlock your potential."
+            android:textColor="@color/unipin_text_sub"
+            android:textSize="16sp" />
+
+        <!-- Hero Banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/heroCard"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="12dp"
+            app:strokeWidth="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivHeroImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hape" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#A610141A" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/verifikasi"
+                        android:backgroundTint="@color/unipin_orange"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"
+                        android:text="FEATURED"
+                        android:textColor="@color/unipin_bg"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Weekly Challenges"
+                        android:textColor="@color/white"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnClaimHero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Claim Now"
+                        android:textColor="@color/unipin_bg"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/unipin_orange"
+                        app:cornerRadius="16dp"
+                        android:paddingHorizontal="24dp" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Learning Modules"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textColor="@color/unipin_orange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Pertemuan 2 Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPertemuan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/unipin_surface"
+            app:cardCornerRadius="28dp"
+            app:strokeColor="@color/unipin_glass_border"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="28dp" android:orientation="vertical">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/verifikasi" android:backgroundTint="#2D3137" android:padding="12dp" android:src="@android:drawable/ic_media_play" app:tint="@color/unipin_orange" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="MOD 01" android:textColor="@color/unipin_text_sub" android:textSize="12sp" />
+                </RelativeLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Pertemuan 2" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Master the map layout and find vantage points." android:textColor="@color/unipin_text_sub" android:textSize="14sp" />
+                <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="16dp" android:progress="75" android:progressTint="@color/unipin_orange" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pertemuan 3 Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPertemuan3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/unipin_surface"
+            app:cardCornerRadius="28dp"
+            app:strokeColor="@color/unipin_glass_border"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="28dp" android:orientation="vertical">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/verifikasi" android:backgroundTint="#2D3137" android:padding="12dp" android:src="@android:drawable/ic_media_play" app:tint="@color/unipin_orange" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="MOD 02" android:textColor="@color/unipin_text_sub" android:textSize="12sp" />
+                </RelativeLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Pertemuan 3" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Advanced strategies and team coordination." android:textColor="@color/unipin_text_sub" android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pertemuan 4 (Active Card) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPertemuan4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/unipin_orange"
+            app:cardCornerRadius="28dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="28dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NEXT UP" android:textColor="@color/unipin_bg" android:textSize="10sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Pertemuan 4" android:textColor="@color/unipin_bg" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mental resilience and decision making." android:textColor="@color/unipin_bg" android:alpha="0.8" android:textSize="14sp" />
+                <com.google.android.material.button.MaterialButton android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="20dp" android:text="Continue Learning" android:textColor="@color/unipin_orange" android:textStyle="bold" app:backgroundTint="@color/unipin_bg" app:cornerRadius="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pertemuan 5 Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPertemuan5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/unipin_surface"
+            app:cardCornerRadius="28dp"
+            app:strokeColor="@color/unipin_glass_border"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="28dp" android:orientation="vertical">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/verifikasi" android:backgroundTint="#2D3137" android:padding="12dp" android:src="@android:drawable/ic_media_play" app:tint="@color/unipin_orange" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="MOD 03" android:textColor="@color/unipin_text_sub" android:textSize="12sp" />
+                </RelativeLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Pertemuan 5" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Team strategies and competitive play." android:textColor="@color/unipin_text_sub" android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pertemuan 7 Card (Locked) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPertemuan7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/unipin_surface"
+            app:cardCornerRadius="28dp"
+            app:strokeColor="@color/unipin_glass_border"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="28dp" android:orientation="vertical">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pertemuan 7" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentEnd="true" android:src="@android:drawable/ic_lock_lock" app:tint="@color/unipin_text_sub" />
+                </RelativeLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Final examination and certification." android:textColor="@color/unipin_text_sub" android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

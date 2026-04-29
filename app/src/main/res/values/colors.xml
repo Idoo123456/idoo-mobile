@@ -3,25 +3,29 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- UniPin Branding Colors (Updated to match HTML Splash Screen) -->
-    <color name="unipin_blue">#121414</color>
-    <color name="unipin_orange">#FF962D</color>
-    <color name="unipin_light_blue">#1F1F1F</color>
+    <!-- UniPin Premium Dark Theme -->
+    <color name="unipin_bg">#10141A</color>
+    <color name="unipin_surface">#1C2026</color>
+    <color name="unipin_primary">#FFB97C</color>
+    <color name="unipin_orange">#FF9100</color>
+    <color name="unipin_text_main">#DFE2EB</color>
+    <color name="unipin_text_sub">#94A3B8</color>
+    <color name="unipin_glass_border">#1AFFFFFF</color>
 
-    <color name="game_bg">#121414</color>
-    <color name="game_accent">#FF962D</color>
-    <color name="game_neon_pink">#E94560</color>
-    <color name="game_card">#1F1F1F</color>
-    <color name="tombol">#FF962D</color>
-
-    <!-- Required for themes.xml -->
-    <color name="primary">#FF962D</color>
+    <!-- Theme Colors (Required by themes.xml) -->
+    <color name="primary">#FF9100</color>
     <color name="on_primary">#FFFFFF</color>
-    <color name="secondary">#121414</color>
+    <color name="secondary">#1C2026</color>
     <color name="on_secondary">#FFFFFF</color>
 
-    <color name="background_page">#121414</color>
+    <!-- Restored Missing Colors (Used by other activities) -->
+    <color name="background_page">#10141A</color>
     <color name="text_main">#FFFFFF</color>
-    <color name="text_sub">#555555</color>
-    <color name="card_outline">#FF962D</color>
+    <color name="text_sub">#B0B0B0</color>
+    <color name="card_outline">#FF9100</color>
+    <color name="tombol">#FF9100</color>
+
+    <!-- Legacy -->
+    <color name="unipin_blue">#121414</color>
+    <color name="unipin_light_blue">#1F1F1F</color>
 </resources>

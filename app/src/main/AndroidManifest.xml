@@ -15,7 +15,7 @@
         android:theme="@style/Theme.FishBook">
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,23 +32,27 @@
             android:exported="true" />
 
         <activity
-            android:name=".pertemuan_5.FifthActivity"
+            android:name=".Home.pertemuan_7.SeventhActivity"
             android:exported="false" />
 
         <activity
-            android:name=".pertemuan_4.FourthActivity"
+            android:name=".Home.pertemuan_5.FifthActivity"
             android:exported="false" />
 
         <activity
-            android:name=".pertemuan3.ThirdResultActivity"
+            android:name=".Home.pertemuan_4.FourthActivity"
             android:exported="false" />
 
         <activity
-            android:name=".pertemuan3.ThirdActivity"
+            android:name=".Home.pertemuan_3.ThirdResultActivity"
             android:exported="false" />
 
         <activity
-            android:name=".Pertemuan_2.SecondActivity"
+            android:name=".Home.pertemuan_3.ThirdActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_2.SecondActivity"
             android:exported="false" />
 
     </application>

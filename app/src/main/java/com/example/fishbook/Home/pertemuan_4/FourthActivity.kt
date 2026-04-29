@@ -1,7 +1,6 @@
-package com.example.fishbook.pertemuan_4
+package com.example.fishbook.Home.pertemuan_4
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fishbook.databinding.ActivityFourthBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
