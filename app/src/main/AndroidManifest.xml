@@ -32,6 +32,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".Home.pertemuan_7.SeventhActivity"
             android:exported="false" />
 

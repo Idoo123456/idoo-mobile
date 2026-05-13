@@ -14,6 +14,7 @@ import com.example.fishbook.Home.pertemuan_3.ThirdActivity
 import com.example.fishbook.Home.pertemuan_4.FourthActivity
 import com.example.fishbook.Home.pertemuan_5.FifthActivity
 import com.example.fishbook.Home.pertemuan_7.SeventhActivity
+import com.example.fishbook.Home.pertemuan_9.NinthActivity
 
 class HomeFragment : Fragment() {
 
@@ -31,9 +32,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Load Hero Image
+        // Load Generic Fishing Hero Image
         Glide.with(this)
-            .load("https://lh3.googleusercontent.com/aida-public/AB6AXuByeqx95nxHZ2VwjIIyrI5BXE0y1pmLD2O-SlqnF_gMv-tdboWT7isA25nk8n7ig4lvsuIjDX-xLSZWhkKgLt0mfL5IQoaqItGGcYIGKxry-U2QgCFY85ZBr1ONRmnT-OSFvANKuJBCoZn46VuARa95pIRcWikhey5O4r0ap-6ZJoqBCl9YAlUtuFfpwEfd4N_TfWYpVxGhSXxV4TroBVZnBJiGcdBPDC-6L9RxBCf0REl2yo14R0FvvxkaBq9kN99xMynnGpfSOrk")
+            .load("https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop")
             .centerCrop()
             .into(binding.ivHeroImage)
 
@@ -52,6 +53,9 @@ class HomeFragment : Fragment() {
         }
         binding.cardPertemuan7.setOnClickListener {
             startActivity(Intent(requireContext(), SeventhActivity::class.java))
+        }
+        binding.cardPertemuan9.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
     }
 

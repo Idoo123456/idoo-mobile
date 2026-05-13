@@ -27,16 +27,16 @@ class FifthActivity : AppCompatActivity() {
         // 1. Toolbar & Setup
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "UniPin Portal"
+        supportActionBar?.title = "FishBook Discovery"
         
-        // 2. Load BG Image (UniPin Theme)
-        val portalBgUrl = "https://wallpaperaccess.com/full/2051333.jpg"
+        // 2. Load BG Image
+        val portalBgUrl = "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=2069&auto=format&fit=crop"
         Glide.with(this)
             .load(portalBgUrl)
             .centerCrop()
             .into(binding.collapsingImage)
             
-        // 3. WebView Setup (Arahkan ke UniPin)
+        // 3. WebView Setup
         setupWebView()
 
         // 4. Scroll Logic
@@ -72,7 +72,7 @@ class FifthActivity : AppCompatActivity() {
                     }
                 }
             }
-            loadUrl("https://www.unipin.com/")
+            loadUrl("https://en.wikipedia.org/wiki/Fish")
         }
     }
 
@@ -112,7 +112,7 @@ class FifthActivity : AppCompatActivity() {
                 true
             }
             R.id.action_about -> {
-                showToast("UniPin Portal v1.0")
+                showToast("FishBook v1.0")
                 true
             }
             else -> super.onOptionsItemSelected(item)

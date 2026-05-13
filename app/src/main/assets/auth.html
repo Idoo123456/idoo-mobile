@@ -1,207 +1,113 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "primary-fixed": "#ffdcc2",
-                        "on-secondary-fixed-variant": "#3d475e",
-                        "inverse-primary": "#904d00",
-                        "error": "#ffb4ab",
-                        "surface-container-highest": "#333535",
-                        "error-container": "#93000a",
-                        "on-surface": "#e2e2e2",
-                        "on-primary": "#4d2700",
-                        "on-primary-container": "#683600",
-                        "outline": "#a38c7c",
-                        "secondary-fixed-dim": "#bcc6e2",
-                        "inverse-on-surface": "#2f3131",
-                        "primary-container": "#ff962d",
-                        "tertiary-container": "#adaec7",
-                        "surface-container": "#1e2020",
-                        "background": "#121414",
-                        "surface-variant": "#333535",
-                        "tertiary-fixed-dim": "#c4c4de",
-                        "secondary-fixed": "#d8e2ff",
-                        "on-tertiary-fixed": "#181a2d",
-                        "on-background": "#e2e2e2",
-                        "on-error": "#690005",
-                        "surface-container-lowest": "#0c0f0f",
-                        "on-secondary": "#263046",
-                        "surface-tint": "#ffb77c",
-                        "tertiary-fixed": "#e0e0fb",
-                        "primary-fixed-dim": "#ffb77c",
-                        "on-tertiary-fixed-variant": "#43455a",
-                        "tertiary": "#c9c9e3",
-                        "secondary": "#bcc6e2",
-                        "on-tertiary-container": "#404156",
-                        "on-primary-fixed-variant": "#6d3900",
-                        "secondary-container": "#3f4960",
-                        "on-secondary-fixed": "#111b30",
-                        "on-primary-fixed": "#2e1500",
-                        "inverse-surface": "#e2e2e2",
-                        "surface-container-high": "#282a2b",
-                        "surface-bright": "#37393a",
-                        "surface": "#121414",
-                        "on-secondary-container": "#aeb8d4",
-                        "surface-container-low": "#1a1c1c",
-                        "on-error-container": "#ffdad6",
-                        "primary": "#ffbe89",
-                        "outline-variant": "#554336",
-                        "on-surface-variant": "#dbc2b0",
-                        "surface-dim": "#121414",
-                        "on-tertiary": "#2d2f43",
-                        "brand-deep": "#16182B",
-                        "brand-surface": "#252F45",
-                        "brand-accent": "#FF962D"
+                        "primary": "#673AB7",
+                        "secondary": "#D1C4E9",
+                        "background": "#FFFFFF",
+                        "surface": "#F5F5F5",
+                        "on-surface": "#1C1B1F",
+                        "on-surface-variant": "#49454F",
+                        "outline": "#79747E",
+                        "brand-accent": "#673AB7"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
                         "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-main": "20px",
-                        "unit-sm": "8px",
-                        "unit-xs": "4px",
-                        "unit-md": "16px",
-                        "gutter": "12px",
-                        "unit-lg": "24px",
-                        "unit-xl": "40px"
-                    },
-                    "fontFamily": {
-                        "body-sm": ["Be Vietnam Pro"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "label-lg": ["Be Vietnam Pro"],
-                        "headline-lg": ["Space Grotesk"],
-                        "label-md": ["Be Vietnam Pro"],
-                        "headline-xl": ["Space Grotesk"],
-                        "label-sm": ["Be Vietnam Pro"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "headline-md": ["Space Grotesk"]
-                    },
-                    "fontSize": {
-                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-                        "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "500"}],
-                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
-                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
                     }
                 },
             },
         }
     </script>
-<style>
+    <style>
         body {
-            background-color: #16182B;
-            color: #e2e2e2;
+            background-color: #FFFFFF;
+            color: #1C1B1F;
             -webkit-font-smoothing: antialiased;
         }
-        .glass-card {
-            background: rgba(37, 47, 69, 0.4);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .custom-input {
+            border: 1px solid #BDBDBD;
+            background: #FFFFFF;
+            transition: all 0.2s;
         }
-        .input-focus-accent:focus-within {
-            border-color: #FF962D;
-            box-shadow: 0 0 0 1px #FF962D;
+        .custom-input:focus-within {
+            border-color: #673AB7;
+            box-shadow: 0 0 0 1px #673AB7;
+        }
+        .wave-header {
+            background-color: #673AB7;
+            height: 180px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
 </head>
-<body class="font-body-md text-on-surface">
-<header class="fixed top-0 w-full z-50 bg-[#16182B]/80 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-5 h-16 w-full">
-<button class="text-[#FF962D] hover:opacity-80 transition-opacity active:scale-95 duration-150">
-<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
-</button>
-<h1 class="font-['Space_Grotesk'] font-bold tracking-tight text-2xl font-black text-[#FF962D] tracking-tighter">UniPin</h1>
-<div class="w-6"></div>
-</header>
-<main class="min-h-screen pt-24 pb-12 px-margin-main flex flex-col items-center max-w-md mx-auto">
-<div class="w-full mb-unit-xl text-center md:text-left">
-<!-- Updated logo with the new URL and larger size -->
-<img alt="UniPin Logo" class="w-auto mx-auto mb-unit-md object-contain h-48 rounded-2xl shadow-2xl" src="https://i.pinimg.com/1200x/a3/b2/9e/a3b29e8411d3ae14b253a3f3302da629.jpg"/>
-<h2 class="font-headline-xl text-headline-xl text-on-surface mb-unit-xs text-center">Welcome to UniPin</h2>
-<p class="font-body-md text-body-md text-on-surface-variant text-center">Login to your account to continue your gaming journey.</p>
-</div>
-<div class="w-full space-y-unit-lg">
-<div class="space-y-unit-md">
-<div class="space-y-unit-xs group">
-<label class="font-label-md text-label-md text-on-surface-variant ml-1">Email Address</label>
-<div class="glass-card rounded-xl flex items-center px-unit-md py-unit-sm input-focus-accent transition-all duration-200">
-<span class="material-symbols-outlined text-on-surface-variant mr-unit-sm" data-icon="mail">mail</span>
-<input id="email" class="bg-transparent border-none focus:ring-0 w-full text-body-md font-body-md placeholder:text-on-surface-variant/40 outline-none" placeholder="name@example.com" type="email"/>
-</div>
-</div>
-<div class="space-y-unit-xs">
-<label class="font-label-md text-label-md text-on-surface-variant ml-1">Password</label>
-<div class="glass-card rounded-xl flex items-center px-unit-md py-unit-sm input-focus-accent transition-all duration-200">
-<span class="material-symbols-outlined text-on-surface-variant mr-unit-sm" data-icon="lock">lock</span>
-<input id="password" class="bg-transparent border-none focus:ring-0 w-full text-body-md font-body-md placeholder:text-on-surface-variant/40 outline-none" placeholder="••••••••" type="password"/>
-<button class="text-on-surface-variant hover:text-brand-accent transition-colors">
-<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
-</button>
-</div>
-<div class="flex justify-end mt-unit-xs">
-<a class="font-label-md text-label-md text-brand-accent hover:underline" href="#">Forgot Password?</a>
-</div>
-</div>
-</div>
-<button id="loginBtn" class="w-full bg-[#FF962D] text-brand-deep font-['Space_Grotesk'] font-bold py-4 rounded-xl text-body-lg hover:opacity-90 active:scale-95 transition-all shadow-[0_8px_30px_rgb(255,150,45,0.2)]">
-                LOG IN
-            </button>
-<div class="relative flex py-unit-md items-center">
-<div class="flex-grow border-t border-white/10"></div>
-<span class="flex-shrink mx-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Or login with</span>
-<div class="flex-grow border-t border-white/10"></div>
-</div>
-<div class="grid grid-cols-2 gap-unit-md">
-<button class="glass-card rounded-xl py-unit-sm flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95">
-<img alt="Google" class="w-5 h-5 mr-unit-sm" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"/>
-<span class="font-label-lg text-label-lg">Google</span>
-</button>
-<button class="glass-card rounded-xl py-unit-sm flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95">
-<span class="material-symbols-outlined text-[#1877F2] mr-unit-sm" data-icon="facebook" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
-<span class="font-label-lg text-label-lg">Facebook</span>
-</button>
-</div>
-</div>
-<footer class="mt-auto pt-unit-xl text-center">
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-                Don't have an account?
-                <a class="text-brand-accent font-bold hover:underline ml-1" href="#">Sign Up</a>
-</p>
-</footer>
-</main>
-<div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-brand-accent/5 blur-[120px] pointer-events-none -z-10"></div>
-<div class="fixed bottom-[-5%] left-[-5%] w-[400px] h-[400px] rounded-full bg-brand-accent/3 blur-[100px] pointer-events-none -z-10"></div>
+<body class="font-sans">
+    <div class="wave-header"></div>
 
-<script>
-    document.getElementById('loginBtn').addEventListener('click', function() {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        if (typeof Android !== 'undefined') {
-            Android.login(email, password);
-        } else {
-            console.log("Android interface not found", email, password);
-        }
-    });
-</script>
+    <main class="min-h-screen flex flex-col items-center px-6 pt-16">
+        <div class="w-full text-center mb-10">
+            <h1 class="text-white text-3xl font-bold mb-2">FishBook</h1>
+            <p class="text-purple-100 opacity-90">Login to continue</p>
+        </div>
 
-</body></html>
+        <div class="w-full max-w-sm bg-white rounded-3xl p-8 shadow-xl">
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700 ml-1">Email Address</label>
+                    <div class="custom-input rounded-xl flex items-center px-4 py-3">
+                        <span class="material-symbols-outlined text-gray-400 mr-3">mail</span>
+                        <input id="email" class="bg-transparent border-none focus:ring-0 w-full text-gray-800 outline-none" placeholder="name@example.com" type="email"/>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700 ml-1">Password</label>
+                    <div class="custom-input rounded-xl flex items-center px-4 py-3">
+                        <span class="material-symbols-outlined text-gray-400 mr-3">lock</span>
+                        <input id="password" class="bg-transparent border-none focus:ring-0 w-full text-gray-800 outline-none" placeholder="••••••••" type="password"/>
+                    </div>
+                </div>
+
+                <button id="loginBtn" class="w-full bg-[#673AB7] text-white font-bold py-4 rounded-xl shadow-lg hover:bg-[#512DA8] active:scale-95 transition-all">
+                    LOGIN
+                </button>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-500">
+                    Don't have an account?
+                    <a class="text-[#673AB7] font-bold hover:underline" href="#">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (typeof Android !== 'undefined') {
+                Android.login(email, password);
+            } else {
+                console.log("Login clicked", email, password);
+            }
+        });
+    </script>
+</body>
+</html>

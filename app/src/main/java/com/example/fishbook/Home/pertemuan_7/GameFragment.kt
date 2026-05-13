@@ -28,14 +28,14 @@ class GameFragment : Fragment() {
 
     private fun setupRecyclerView() {
         val listGame = mutableListOf(
-            GameProduct("Mobile Legends", "Moonton", "Rp 3.000", "https://i.pinimg.com/736x/8a/9e/9e/8a9e9e6f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("Free Fire", "Garena", "Rp 1.000", "https://i.pinimg.com/736x/0a/6a/9a/0a6a9a6f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("PUBG Mobile", "Tencent", "Rp 15.000", "https://i.pinimg.com/736x/b2/b2/b2/b2b2b26f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("Genshin Impact", "HoYoverse", "Rp 16.000", "https://i.pinimg.com/736x/c3/c3/c3/c3c3c36f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("Point Blank", "Zepetto", "Rp 10.000", "https://i.pinimg.com/736x/d4/d4/d4/d4d4d46f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("Valorant", "Riot Games", "Rp 50.000", "https://i.pinimg.com/736x/e5/e5/e5/e5e5e56f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("Roblox", "Roblox Corp", "Rp 15.000", "https://i.pinimg.com/736x/f6/f6/f6/f6f6f66f3d1e6d3d3d3d3d3d3d3d3d3d.jpg"),
-            GameProduct("Call of Duty", "Activision", "Rp 12.000", "https://i.pinimg.com/736x/a1/a1/a1/a1a1a16f3d1e6d3d3d3d3d3d3d3d3d3d.jpg")
+            GameProduct("Goldfish", "Aquarium", "Rp 5.000", "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Betta Fish", "Freshwater", "Rp 25.000", "https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Koi Fish", "Pond", "Rp 150.000", "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Guppy", "Nano Tank", "Rp 3.000", "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Discus", "Amazon", "Rp 200.000", "https://images.unsplash.com/photo-1516233758813-a38d024919c5?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Angelfish", "Tropical", "Rp 45.000", "https://images.unsplash.com/photo-1524704796725-9fc3044a58b2?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Arowana", "Monster Fish", "Rp 1.500.000", "https://images.unsplash.com/photo-1510425514574-67250629237b?q=80&w=500&auto=format&fit=crop"),
+            GameProduct("Neon Tetra", "Schooling", "Rp 2.000", "https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?q=80&w=500&auto=format&fit=crop")
         )
 
         val adapter = GameAdapter(listGame) { position ->

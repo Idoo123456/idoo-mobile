@@ -25,7 +25,7 @@ class WebFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val url = "https://www.unipin.com/?utm_source=GSN&utm_medium=Paid%20Ads&utm_campaign=ID%20-%20General%20UniPin%20%7C%20GSN%20Lifetime%20(Arifin)&gad_source=1&gad_campaignid=20916923230&gbraid=0AAAAACf0nBdixdeVmjemLKsSuky94ODrL&gclid=Cj0KCQjw2MbPBhCSARIsAP3jP9x2C3RY6qLC_T1H1Brd1Jv2dnp2ZAw8MhvA8JGYfyse1vO7muFLRkYaAtGwEALw_wcB"
+        val url = "https://en.wikipedia.org/wiki/Fish"
 
         binding.webView.apply {
             settings.javaScriptEnabled = true
