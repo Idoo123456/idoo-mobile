@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.gridlayout)
+    implementation(libs.androidx.recyclerview)
     implementation(libs.glide)
     annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)

@@ -1,5 +1,7 @@
 package com.example.fishbook.More
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,40 +9,13 @@ import android.view.ViewGroup
 import android.widget.SimpleAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.fishbook.AuthActivity
 import com.example.fishbook.databinding.FragmentMoreBinding
 
 class MoreFragment : Fragment() {
 
     private var _binding: FragmentMoreBinding? = null
     private val binding get() = _binding!!
-
-    private val dataList = listOf(
-        "Kotlin",
-        "Java",
-        "Python",
-        "C++",
-        "JavaScript",
-        "Dart",
-        "Swift",
-        "Go",
-        "Ruby",
-        "R",
-        "PHP",
-        "C#",
-        "TypeScript",
-        "Shell",
-        "SQL",
-        "Perl",
-        "Rust",
-        "Scala",
-        "Haskell",
-        "Lua",
-        "Erlang",
-        "Prolog",
-        "Assembly",
-        "Objective-C",
-        "VBA"
-    )
 
     private val dataListWithDesc = listOf(
         mapOf("title" to "Kotlin", "desc" to "Bahasa untuk Android modern"),
@@ -62,7 +37,7 @@ class MoreFragment : Fragment() {
         /** Toolbar */
         binding.toolbar.title = "More"
 
-        // Ubah adapter menjadi seperti berikut
+        // Setup ListView
         val adapter = SimpleAdapter(
             requireContext(),
             dataListWithDesc,
@@ -70,17 +45,37 @@ class MoreFragment : Fragment() {
             arrayOf("title", "desc"),
             intArrayOf(android.R.id.text1, android.R.id.text2)
         )
-
-        // Hubungkan listViewItems dengan adapter
         binding.listViewItems.adapter = adapter
 
-        // Tambahkan aksi saat item di-list diklik
         binding.listViewItems.setOnItemClickListener { _, _, position, _ ->
             val selectedItem = dataListWithDesc[position]
             val title = selectedItem["title"]
             val desc = selectedItem["desc"]
             Toast.makeText(requireContext(), "Kamu memilih: $title ($desc)", Toast.LENGTH_SHORT).show()
         }
+
+        // Setup Logout Button
+        binding.btnLogout.setOnClickListener {
+            handleLogout()
+        }
+    }
+
+    private fun handleLogout() {
+        // Hapus status login dari SharedPreferences
+        val sharedPref = requireActivity().getSharedPreferences("FishBookPref", Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putBoolean("isLoggedIn", false)
+            putString("userName", "")
+            apply()
+        }
+
+        Toast.makeText(requireContext(), "Berhasil Logout", Toast.LENGTH_SHORT).show()
+
+        // Kembali ke AuthActivity
+        val intent = Intent(requireContext(), AuthActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        requireActivity().finish()
     }
 
     override fun onDestroyView() {

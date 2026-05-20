@@ -1,6 +1,7 @@
 package com.example.fishbook
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.webkit.JavascriptInterface
@@ -60,10 +61,17 @@ class AuthActivity : AppCompatActivity() {
         }
 
         // Logic login: username harus sama dengan password (sesuai kode sebelumnya)
-        // Atau jika menggunakan email, kita ambil bagian sebelum @ sebagai username
         val nameToDisplay = if (username.contains("@")) username.split("@")[0] else username
 
         if (username == password) {
+            // Simpan status login ke SharedPreferences
+            val sharedPref = getSharedPreferences("FishBookPref", Context.MODE_PRIVATE)
+            with(sharedPref.edit()) {
+                putBoolean("isLoggedIn", true)
+                putString("userName", nameToDisplay)
+                apply()
+            }
+
             Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@AuthActivity, MainActivity::class.java)
             intent.putExtra("USER_NAME", nameToDisplay)

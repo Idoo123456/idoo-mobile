@@ -15,6 +15,7 @@ import com.example.fishbook.Home.pertemuan_4.FourthActivity
 import com.example.fishbook.Home.pertemuan_5.FifthActivity
 import com.example.fishbook.Home.pertemuan_7.SeventhActivity
 import com.example.fishbook.Home.pertemuan_9.NinthActivity
+import com.example.fishbook.Home.pertemuan_10.TenthActivity
 
 class HomeFragment : Fragment() {
 
@@ -56,6 +57,9 @@ class HomeFragment : Fragment() {
         }
         binding.cardPertemuan9.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+        binding.cardPertemuan10.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
     }
 

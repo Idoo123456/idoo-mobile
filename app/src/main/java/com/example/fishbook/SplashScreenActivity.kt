@@ -1,6 +1,7 @@
 package com.example.fishbook
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -55,9 +56,25 @@ class SplashScreenActivity : AppCompatActivity() {
         webView.loadDataWithBaseURL(null, htmlData, "text/html", "UTF-8", null)
 
         Handler(Looper.getMainLooper()).postDelayed({
+            checkLoginStatus()
+        }, 3000)
+    }
+
+    private fun checkLoginStatus() {
+        val sharedPref = getSharedPreferences("FishBookPref", Context.MODE_PRIVATE)
+        val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+        val userName = sharedPref.getString("userName", "")
+
+        if (isLoggedIn) {
+            // Jika sudah login, langsung ke MainActivity
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("USER_NAME", userName)
+            startActivity(intent)
+        } else {
+            // Jika belum login, ke AuthActivity
             val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
-            finish()
-        }, 3000)
+        }
+        finish()
     }
 }

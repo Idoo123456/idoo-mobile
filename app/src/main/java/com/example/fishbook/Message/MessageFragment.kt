@@ -13,16 +13,16 @@ class MessageFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val messageList = listOf(
-        MessageModel("Alya", "Halo! Apa kabar?", "https://avatar.iran.liara.run/public/1"),
-        MessageModel("Budi", "Sudah makan?", "https://avatar.iran.liara.run/public/2"),
-        MessageModel("Citra", "Jangan lupa tugasnya ya!", "https://avatar.iran.liara.run/public/3"),
-        MessageModel("Dika", "Besok kita rapat jam 9", "https://avatar.iran.liara.run/public/4"),
-        MessageModel("Eka", "Nice job kemarin!", "https://avatar.iran.liara.run/public/5"),
-        MessageModel("Fajar", "Lagi ngapain?", "https://avatar.iran.liara.run/public/6"),
-        MessageModel("Gita", "Boleh minta tolong?", "https://avatar.iran.liara.run/public/7"),
-        MessageModel("Hana", "Lihat email ya", "https://avatar.iran.liara.run/public/8"),
-        MessageModel("Irfan", "Oke noted", "https://avatar.iran.liara.run/public/9"),
-        MessageModel("Joko", "Sampai jumpa besok", "https://avatar.iran.liara.run/public/10")
+        MessageModel("Capt. Juna", "Gimana tarikannya hari ini? Strike terus?", "https://api.dicebear.com/9.x/avataaars/png?seed=Juna", "10:30 AM"),
+        MessageModel("Angler Budi", "Besok spot waduk Gajah Mungkur oke gak?", "https://api.dicebear.com/9.x/avataaars/png?seed=Budi", "10:35 AM"),
+        MessageModel("Citra Mancing", "Umpan softfrog warna hijau lagi gacor nih!", "https://api.dicebear.com/9.x/avataaars/png?seed=Citra", "11:00 AM"),
+        MessageModel("Dika Bass", "Info spot Gabus dong om, lagi pengen casting.", "https://api.dicebear.com/9.x/avataaars/png?seed=Dika", "Yesterday"),
+        MessageModel("Eka Shimano", "Reel Stradic-nya udah mendarat mas, mantap!", "https://api.dicebear.com/9.x/avataaars/png?seed=Eka", "Yesterday"),
+        MessageModel("Fajar Casting", "Ikan Toman-nya beringas bener tadi pagi.", "https://api.dicebear.com/9.x/avataaars/png?seed=Fajar", "Monday"),
+        MessageModel("Gita Angler", "Ada yang punya info jadwal pasang surut?", "https://api.dicebear.com/9.x/avataaars/png?seed=Gita", "Monday"),
+        MessageModel("Hana Fishing", "Spot muara lagi banyak Kakap Putih nih.", "https://api.dicebear.com/9.x/avataaars/png?seed=Hana", "Sunday"),
+        MessageModel("Irfan Jigging", "Minggu depan sewa kapal bareng yuk!", "https://api.dicebear.com/9.x/avataaars/png?seed=Irfan", "Sunday"),
+        MessageModel("Joko Strike", "Rekor Barramundi 5kg pecah hari ini!", "https://api.dicebear.com/9.x/avataaars/png?seed=Joko", "Last Week")
     )
 
     override fun onCreateView(
@@ -36,9 +36,6 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        // Setup Toolbar
-        binding.toolbar.title = "Messages"
-
         // Inisialisasi Custom Adapter
         val adapter = MessageAdapter(requireContext(), messageList)
 
