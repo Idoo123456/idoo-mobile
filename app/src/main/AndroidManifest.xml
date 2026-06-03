@@ -32,6 +32,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".Message.tutorial.TutorialMessageActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".Home.pertemuan_10.TenthActivity"
             android:exported="false" />
 

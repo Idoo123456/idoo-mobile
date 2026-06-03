@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.androidx.gridlayout)
     implementation(libs.androidx.recyclerview)
     implementation(libs.glide)
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
     annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

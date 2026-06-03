@@ -8,6 +8,7 @@
     <color name="purple_dark">#512DA8</color>
     <color name="purple_light">#D1C4E9</color>
     <color name="text_grey">#BDBDBD</color>
+    <color name="abu_gelap">#757575</color>
 
     <!-- Theme Aliases -->
     <color name="primary">#673AB7</color>
@@ -28,4 +29,9 @@
     <color name="text_sub">#757575</color>
     <color name="card_outline">#673AB7</color>
     <color name="tombol">#673AB7</color>
+
+    <!-- Onboarding Colors -->
+    <color name="onboard_blue">#64B5F6</color>
+    <color name="onboard_green">#AED581</color>
+    <color name="onboard_teal">#4DB6AC</color>
 </resources>

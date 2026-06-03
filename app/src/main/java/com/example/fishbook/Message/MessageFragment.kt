@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.fishbook.MainActivity
+import com.example.fishbook.Message.tutorial.TutorialAdapter
 import com.example.fishbook.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
@@ -36,11 +38,45 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
+        setupViewPager()
+        setupMessageList()
+        
+        // Klik tombol info untuk memunculkan tutorial
+        binding.btnTutorial.setOnClickListener {
+            showTutorial()
+        }
+    }
+
+    private fun setupViewPager() {
+        val adapter = TutorialAdapter(this)
+        binding.viewPagerTutorial.adapter = adapter
+        
+        // Hubungkan DotsIndicator dengan ViewPager2
+        binding.dotsIndicator.setViewPager2(binding.viewPagerTutorial)
+    }
+
+    private fun setupMessageList() {
         // Inisialisasi Custom Adapter
         val adapter = MessageAdapter(requireContext(), messageList)
 
         // Hubungkan ListView dengan adapter
         binding.listViewMessages.adapter = adapter
+    }
+
+    private fun showTutorial() {
+        binding.layoutTutorial.visibility = View.VISIBLE
+        binding.layoutMainContent.visibility = View.GONE
+        
+        // Sembunyikan Navigasi di MainActivity agar full screen
+        (activity as? MainActivity)?.setNavVisibility(false)
+    }
+
+    fun finishTutorial() {
+        binding.layoutTutorial.visibility = View.GONE
+        binding.layoutMainContent.visibility = View.VISIBLE
+        
+        // Tampilkan kembali Navigasi di MainActivity
+        (activity as? MainActivity)?.setNavVisibility(true)
     }
 
     override fun onDestroyView() {
