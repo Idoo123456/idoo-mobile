@@ -141,6 +141,31 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/navNote"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ivNavNote"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="@color/text_grey" />
+                <TextView
+                    android:id="@+id/tvNavNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOTE"
+                    android:textColor="@color/text_grey"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/navMore"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

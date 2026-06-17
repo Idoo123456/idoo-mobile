@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide
 import com.example.fishbook.Home.HomeFragment
 import com.example.fishbook.Message.MessageFragment
 import com.example.fishbook.More.MoreFragment
+import com.example.fishbook.Note.NoteFragment
 import com.example.fishbook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.navStore.setOnClickListener {
             replaceFragment(MessageFragment(), "MESSAGE")
+        }
+
+        binding.navNote.setOnClickListener {
+            replaceFragment(NoteFragment(), "NOTE")
         }
 
         binding.navMore.setOnClickListener {
@@ -106,6 +111,8 @@ class MainActivity : AppCompatActivity() {
         binding.tvNavHome.setTextColor(grey)
         binding.ivNavStore.imageTintList = ColorStateList.valueOf(grey)
         binding.tvNavStore.setTextColor(grey)
+        binding.ivNavNote.imageTintList = ColorStateList.valueOf(grey)
+        binding.tvNavNote.setTextColor(grey)
         binding.ivNavMore.imageTintList = ColorStateList.valueOf(grey)
         binding.tvNavMore.setTextColor(grey)
 
@@ -118,6 +125,10 @@ class MainActivity : AppCompatActivity() {
             "MESSAGE" -> {
                 binding.ivNavStore.imageTintList = ColorStateList.valueOf(purple)
                 binding.tvNavStore.setTextColor(purple)
+            }
+            "NOTE" -> {
+                binding.ivNavNote.imageTintList = ColorStateList.valueOf(purple)
+                binding.tvNavNote.setTextColor(purple)
             }
             "MORE" -> {
                 binding.ivNavMore.imageTintList = ColorStateList.valueOf(purple)

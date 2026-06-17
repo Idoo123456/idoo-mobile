@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="100dp">
+        android:paddingBottom="180dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +45,6 @@
                 android:text="Pertemuan 2"
                 app:cornerRadius="12dp" />
 
-            <!-- Using a Grid-like layout for buttons similar to the screenshot -->
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -128,6 +127,17 @@
                     android:backgroundTint="#673AB7"
                     android:text="Gallery"
                     app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardPertemuan13"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FF5722"
+                    android:text="Pertemuan 13"
+                    app:cornerRadius="12dp" />
             </GridLayout>
 
             <TextView
@@ -160,5 +170,17 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="144dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:backgroundTint="@color/purple_primary"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:tint="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

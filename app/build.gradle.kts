@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -45,6 +46,14 @@ dependencies {
     implementation(libs.glide)
     implementation("com.tbuonomo:dotsindicator:5.1.0")
     
+    // ZXing for QR Code
+    implementation("com.google.zxing:core:3.5.2")
+    
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
@@ -56,6 +65,14 @@ dependencies {
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+
+    // CameraX
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
+
+    // ML Kit for QR code
+    implementation(libs.barcode.scanning)
 
     annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)
