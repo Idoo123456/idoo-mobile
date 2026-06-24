@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FishBook</string>
+    <string name="judul">MASUKKAN NOMOR HP</string>
+    <string name="img_main_url">https://images.unsplash.com/photo-1516233758813-a38d024919c5?q=80&amp;w=1200&amp;auto=format&amp;fit=crop</string>
+    <string name="img_dg_bg">https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&amp;w=1200&amp;auto=format&amp;fit=crop</string>
+    <string name="tab_text_1">Tab A</string>
+    <string name="tab_text_2">Tab B</string>
+</resources>

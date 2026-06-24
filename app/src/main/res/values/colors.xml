@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Purple & White Theme -->
+    <color name="purple_primary">#673AB7</color>
+    <color name="purple_dark">#512DA8</color>
+    <color name="purple_light">#D1C4E9</color>
+    <color name="text_grey">#BDBDBD</color>
+    <color name="abu_gelap">#757575</color>
+
+    <!-- Theme Aliases -->
+    <color name="primary">#673AB7</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="secondary">#D1C4E9</color>
+    <color name="on_secondary">#000000</color>
+
+    <!-- App System Colors -->
+    <color name="app_bg">#FFFFFF</color>
+    <color name="app_surface">#F5F5F5</color>
+    <color name="app_text_main">#000000</color>
+    <color name="app_text_sub">#757575</color>
+    <color name="app_border">#E0E0E0</color>
+
+    <!-- UI Components -->
+    <color name="background_page">#FFFFFF</color>
+    <color name="text_main">#000000</color>
+    <color name="text_sub">#757575</color>
+    <color name="card_outline">#673AB7</color>
+    <color name="tombol">#673AB7</color>
+
+    <!-- Onboarding Colors -->
+    <color name="onboard_blue">#64B5F6</color>
+    <color name="onboard_green">#AED581</color>
+    <color name="onboard_teal">#4DB6AC</color>
+</resources>

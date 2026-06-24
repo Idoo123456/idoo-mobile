@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FishBook">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AuthActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Note.NoteFormActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Message.tutorial.TutorialMessageActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_11.EleventhActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_13.ThirteenthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_10.TenthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_7.SeventhActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_5.FifthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_4.FourthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_3.ThirdResultActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_3.ThirdActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan_2.SecondActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".utils.ReminderReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

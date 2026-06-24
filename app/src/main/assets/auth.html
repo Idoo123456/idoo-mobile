@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#673AB7",
+                        "secondary": "#D1C4E9",
+                        "background": "#FFFFFF",
+                        "surface": "#F5F5F5",
+                        "on-surface": "#1C1B1F",
+                        "on-surface-variant": "#49454F",
+                        "outline": "#79747E",
+                        "brand-accent": "#673AB7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #1C1B1F;
+            -webkit-font-smoothing: antialiased;
+        }
+        .custom-input {
+            border: 1px solid #BDBDBD;
+            background: #FFFFFF;
+            transition: all 0.2s;
+        }
+        .custom-input:focus-within {
+            border-color: #673AB7;
+            box-shadow: 0 0 0 1px #673AB7;
+        }
+        .wave-header {
+            background-color: #673AB7;
+            height: 180px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="wave-header"></div>
+
+    <main class="min-h-screen flex flex-col items-center px-6 pt-16">
+        <div class="w-full text-center mb-10">
+            <h1 class="text-white text-3xl font-bold mb-2">FishBook</h1>
+            <p class="text-purple-100 opacity-90">Login to continue</p>
+        </div>
+
+        <div class="w-full max-w-sm bg-white rounded-3xl p-8 shadow-xl">
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700 ml-1">Email Address</label>
+                    <div class="custom-input rounded-xl flex items-center px-4 py-3">
+                        <span class="material-symbols-outlined text-gray-400 mr-3">mail</span>
+                        <input id="email" class="bg-transparent border-none focus:ring-0 w-full text-gray-800 outline-none" placeholder="name@example.com" type="email"/>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700 ml-1">Password</label>
+                    <div class="custom-input rounded-xl flex items-center px-4 py-3">
+                        <span class="material-symbols-outlined text-gray-400 mr-3">lock</span>
+                        <input id="password" class="bg-transparent border-none focus:ring-0 w-full text-gray-800 outline-none" placeholder="••••••••" type="password"/>
+                    </div>
+                </div>
+
+                <button id="loginBtn" class="w-full bg-[#673AB7] text-white font-bold py-4 rounded-xl shadow-lg hover:bg-[#512DA8] active:scale-95 transition-all">
+                    LOGIN
+                </button>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-500">
+                    Don't have an account?
+                    <a class="text-[#673AB7] font-bold hover:underline" href="#">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (typeof Android !== 'undefined') {
+                Android.login(email, password);
+            } else {
+                console.log("Login clicked", email, password);
+            }
+        });
+    </script>
+</body>
+</html>
